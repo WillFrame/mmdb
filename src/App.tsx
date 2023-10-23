@@ -1,4 +1,4 @@
-import React, {FC} from "react";
+import React, {FC} from 'react';
 import Router from './modules/router';
 import Providers from './modules/providers';
 

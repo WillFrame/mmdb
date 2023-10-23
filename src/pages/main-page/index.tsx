@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import React, {FC} from 'react';
 
 const MainPage: FC = () => {
     return (
@@ -6,6 +6,6 @@ const MainPage: FC = () => {
             mainPage   
         </>
     );
-}
+};
 
 export default MainPage;
