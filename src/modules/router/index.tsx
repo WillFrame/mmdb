@@ -1,7 +1,4 @@
-import {
-    createBrowserRouter,
-    RouterProvider,
-} from "react-router-dom";
+import {RouterProvider} from "react-router-dom";
 import React, { FC } from "react";
 import { ROUTER } from './consts';
 
