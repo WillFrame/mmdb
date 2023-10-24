@@ -1,5 +1,5 @@
-import React, { PropsWithChildren, FC } from 'react';
-import { ScopedCssBaseline } from '@mui/material';
+import React, {PropsWithChildren, FC} from 'react';
+import {ScopedCssBaseline} from '@mui/material';
 
 import '@fontsource/roboto/300.css';
 import '@fontsource/roboto/400.css';
