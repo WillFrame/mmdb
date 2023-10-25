@@ -4,9 +4,11 @@ import MaterialUiProvider from './components/material-ui';
 
 const Providers: Component = ({children}) => {
     return (
-        <MaterialUiProvider>
-            {children}
-        </MaterialUiProvider>
+        <div style={{height: '100vh'}}>
+            <MaterialUiProvider>
+                {children}
+            </MaterialUiProvider>
+        </div>
     );
 };
 
