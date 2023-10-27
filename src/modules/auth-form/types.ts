@@ -5,4 +5,8 @@ export type FormValues = {
     password: string;
 };
 
-export type Component = FC;
+export type Props = {
+    onSubmitCallback: (values: FormValues) => void;
+};
+
+export type Component = FC<Props>;

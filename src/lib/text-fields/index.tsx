@@ -1,4 +1,6 @@
-export const textField: Record<string, string> = {
-    login: 'Логин',
-    password: 'Пароль',
+export const enum TextFields {
+    Login = 'Логин',
+    Password = 'Пароль',
+    Save = 'Сохранить',
+    Registration = 'Регистрация',
 };
