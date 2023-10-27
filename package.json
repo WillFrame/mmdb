@@ -36,7 +36,7 @@
   "scripts": {
     "init": "pnpm install",
     "lint": "eslint",
-    "start": "cross-env BROWSER=none react-scripts start",
+    "start": "cross-env BROWSER=none ESLINT_NO_DEV_ERRORS='true' react-scripts start",
     "build": "react-scripts build"
   },
   "eslintConfig": {
