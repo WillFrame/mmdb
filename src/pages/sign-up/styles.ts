@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import Card from '../../components/ui-kit/card';
+import {Card} from '../../components/ui-kit';
 import {indigo} from '@mui/material/colors';
 
 export const Wrapper = styled.div`

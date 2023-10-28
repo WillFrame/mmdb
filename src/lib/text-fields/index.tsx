@@ -3,4 +3,7 @@ export const enum TextFields {
     Password = 'Пароль',
     Save = 'Сохранить',
     Registration = 'Регистрация',
+    RequiredField = 'Обязательноe поле',
+    MaxLength = 'Максимальное количество символов',
+    MinLength = 'Минимальное количество символов',
 };

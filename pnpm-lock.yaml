@@ -4,6 +4,7 @@ specifiers:
   '@emotion/react': ^11.11.1
   '@emotion/styled': ^11.11.0
   '@fontsource/roboto': ^5.0.8
+  '@hookform/error-message': ^2.0.1
   '@mui/icons-material': ^5.14.14
   '@mui/material': ^5.14.14
   '@types/jest': ^27.5.2
@@ -36,6 +37,7 @@ dependencies:
   '@emotion/react': 11.11.1_uruz7wj5nvbintwsrh6fwqb4ri
   '@emotion/styled': 11.11.0_7blvodoszurgfdsbrjt3zvbdj4
   '@fontsource/roboto': 5.0.8
+  '@hookform/error-message': 2.0.1_yy5jm4u6d6r73ghw5vv3yttcpu
   '@mui/icons-material': 5.14.14_ymnfnma4mkjlw666h7wov7kbmq
   '@mui/material': 5.14.14_75ejnbme4fun5yje6gluptlrgq
   '@types/jest': 27.5.2
@@ -1868,6 +1870,18 @@ packages:
 
   /@fontsource/roboto/5.0.8:
     resolution: {integrity: sha512-XxPltXs5R31D6UZeLIV1td3wTXU3jzd3f2DLsXI8tytMGBkIsGcc9sIyiupRtA8y73HAhuSCeweOoBqf6DbWCA==}
+    dev: false
+
+  /@hookform/error-message/2.0.1_yy5jm4u6d6r73ghw5vv3yttcpu:
+    resolution: {integrity: sha512-U410sAr92xgxT1idlu9WWOVjndxLdgPUHEB8Schr27C9eh7/xUnITWpCMF93s+lGiG++D4JnbSnrb5A21AdSNg==}
+    peerDependencies:
+      react: '>=16.8.0'
+      react-dom: '>=16.8.0'
+      react-hook-form: ^7.0.0
+    dependencies:
+      react: 18.2.0
+      react-dom: 18.2.0_react@18.2.0
+      react-hook-form: 7.47.0_react@18.2.0
     dev: false
 
   /@humanwhocodes/config-array/0.11.13:
