@@ -6,8 +6,10 @@ import {Wrapper} from './styles';
 import {Button, Typography} from '../../components/ui-kit';
 import {InputElement} from '../../components';
 import {DEFAULT_FORM_VALUES, VALIDATION_RULES} from './consts';
+import {useNavigate} from 'react-router-dom';
 
 const AuthForm: Component = () => {
+    const navigate = useNavigate();
     const {
         handleSubmit,
         control,
@@ -19,6 +21,7 @@ const AuthForm: Component = () => {
         // eslint-disable-next-line no-console
         console.log(values);
         reset(DEFAULT_FORM_VALUES);
+        navigate('/sign-in');
     });
 
     return (
