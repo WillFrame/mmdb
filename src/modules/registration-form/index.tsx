@@ -16,6 +16,7 @@ const AuthForm: Component = () => {
     } = useForm<FormValues>();
 
     const onSubmit = handleSubmit((values: FormValues) => {
+        // eslint-disable-next-line no-console
         console.log(values);
         reset(DEFAULT_FORM_VALUES);
     });
