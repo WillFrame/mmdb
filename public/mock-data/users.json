@@ -1,0 +1,14 @@
+{
+    "users": [
+        {
+            "id": 1,
+            "login": "willframe",
+            "password": "password"
+        },
+        {
+            "id": 2,
+            "login": "testUser",
+            "password": "password"
+        }
+    ]
+}
