@@ -9,7 +9,7 @@ import {DEFAULT_FORM_VALUES, VALIDATION_RULES} from './consts';
 import {useNavigate} from 'react-router-dom';
 import {Routes} from '../../lib/consts/routes';
 
-const RegistrationForm: Component = () => {
+const AuthForm: Component = () => {
     const navigate = useNavigate();
     const {
         handleSubmit,
@@ -18,13 +18,13 @@ const RegistrationForm: Component = () => {
         formState: {isValid},
     } = useForm<FormValues>();
 
-    const goAuth = () => navigate(Routes.SIGNIN);
+    const goRegistration = () => navigate(Routes.SIGNUP);
 
     const onSubmit = handleSubmit((values: FormValues) => {
         // eslint-disable-next-line no-console
         console.log(values);
         reset(DEFAULT_FORM_VALUES);
-        navigate(Routes.SIGNIN);
+        // navigate('/sign-in');
     });
 
     return (
@@ -32,10 +32,10 @@ const RegistrationForm: Component = () => {
             <Wrapper>
                 <HeaderWrapper>
                     <Typography variant="h5">
-                        {TextFields.Registration}
+                        {TextFields.Entry}
                     </Typography>
-                    <StyledTypography variant="caption" onClick={goAuth}>
-                        {TextFields.HaveAccount}
+                    <StyledTypography variant="caption" onClick={goRegistration}>
+                        {TextFields.DoNotHaveAccount}
                         <StyledArrowRight />
                     </StyledTypography>
                 </HeaderWrapper>
@@ -72,4 +72,4 @@ const RegistrationForm: Component = () => {
     );
 };
 
-export default RegistrationForm;
+export default AuthForm;
