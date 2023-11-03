@@ -30,3 +30,9 @@ export const StyledTypography = styled(Typography)`
 export const StyledArrowRight = styled(ArrowRightAlt)`
     font-size: 1.5em;
 `;
+
+export const ButtonContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+`;

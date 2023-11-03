@@ -14,6 +14,7 @@ specifiers:
   '@types/react-redux': ^7.1.28
   '@typescript-eslint/eslint-plugin': ^6.9.0
   '@typescript-eslint/parser': ^6.9.0
+  axios: ^1.6.0
   cross-env: ^7.0.3
   eslint: ^8.52.0
   eslint-config-prettier: ^9.0.0
@@ -47,6 +48,7 @@ dependencies:
   '@types/react-redux': 7.1.28
   '@typescript-eslint/eslint-plugin': 6.9.0_m6cm5srvqcxznap7mfzefoxhva
   '@typescript-eslint/parser': 6.9.0_a3vhf2jlnnjnbmpqqovi7mhg4a
+  axios: 1.6.0
   cross-env: 7.0.3
   eslint-config-prettier: 9.0.0_eslint@8.52.0
   eslint-import-resolver-typescript: 3.6.1_4ejohcm5jrprykj3ydrz3ygok4
@@ -3666,6 +3668,16 @@ packages:
     engines: {node: '>=4'}
     dev: false
 
+  /axios/1.6.0:
+    resolution: {integrity: sha512-EZ1DYihju9pwVB+jg67ogm+Tmqc6JmhamRN6I4Zt8DfZu5lbcQGw3ozH9lFejSJgs/ibaef3A9PMXPLeefFGJg==}
+    dependencies:
+      follow-redirects: 1.15.3
+      form-data: 4.0.0
+      proxy-from-env: 1.1.0
+    transitivePeerDependencies:
+      - debug
+    dev: false
+
   /axobject-query/3.2.1:
     resolution: {integrity: sha512-jsyHu61e6N4Vbz/v18DHwWYKK0bSWLqn47eeDSKPB7m8tqMHF9YJ+mhIk2lVteyZrY8tnSj/jHOv4YiTCuCJgg==}
     dependencies:
@@ -5758,6 +5770,15 @@ packages:
 
   /form-data/3.0.1:
     resolution: {integrity: sha512-RHkBKtLWUVwd7SqRIvCZMEvAMoGUp0XU+seQiZejj0COz3RI3hWP4sCv3gZWWLjJTd7rGwcsF5eKZGii0r/hbg==}
+    engines: {node: '>= 6'}
+    dependencies:
+      asynckit: 0.4.0
+      combined-stream: 1.0.8
+      mime-types: 2.1.35
+    dev: false
+
+  /form-data/4.0.0:
+    resolution: {integrity: sha512-ETEklSGi5t0QMZuiXoA/Q6vcnxcLQP5vdugSpuAyi6SVGi2clPPp+xgEhuMaHC+zGgn31Kd235W35f7Hykkaww==}
     engines: {node: '>= 6'}
     dependencies:
       asynckit: 0.4.0
@@ -8831,6 +8852,10 @@ packages:
     dependencies:
       forwarded: 0.2.0
       ipaddr.js: 1.9.1
+    dev: false
+
+  /proxy-from-env/1.1.0:
+    resolution: {integrity: sha512-D+zkORCbA9f1tdWRK0RaCR3GPv50cMxcrz4X8k5LTSUD1Dkw47mKJEZQNunItRTkWwgtaUSo1RVFRIG9ZXiFYg==}
     dev: false
 
   /psl/1.9.0:

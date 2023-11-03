@@ -1,15 +1,13 @@
 import React, {FC} from 'react';
-import AuthForm from '../../modules/registration-form';
+import RegistrationForm from '../../modules/registration-form';
 import {StyledCard, Wrapper} from './styles';
 
-const SignUp: FC = () => {
-    return (
-        <Wrapper>
-            <StyledCard>
-                <AuthForm />
-            </StyledCard>
-        </Wrapper>
-    );
-};
+const SignUp: FC = () => (
+    <Wrapper>
+        <StyledCard>
+            <RegistrationForm />
+        </StyledCard>
+    </Wrapper>
+);
 
 export default SignUp;
