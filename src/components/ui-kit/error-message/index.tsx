@@ -24,4 +24,4 @@ const ErrorMessages: Component = ({
 };
 
 export default ErrorMessages;
-export {type Props};
+export {type Props, Message};

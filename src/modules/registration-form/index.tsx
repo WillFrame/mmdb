@@ -16,7 +16,7 @@ const RegistrationForm: Component = () => {
         control,
         reset,
         formState: {isValid},
-    } = useForm<FormValues>();
+    } = useForm<FormValues>({mode: 'onBlur'});
 
     const goAuth = () => navigate(Routes.SIGNIN);
 

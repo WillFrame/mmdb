@@ -1,30 +1,37 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {Controller, useForm} from 'react-hook-form';
+import {useNavigate} from 'react-router-dom';
 import {Component, FormValues} from './types';
 import {TextFields} from '../../lib/text-fields';
-import {HeaderWrapper, StyledArrowRight, StyledTypography, Wrapper} from './styles';
-import {Button, Typography} from '../../components/ui-kit';
+import {HeaderWrapper, StyledArrowRight, StyledTypography, Wrapper, ButtonContainer} from './styles';
+import {Button, Message, Typography} from '../../components/ui-kit';
 import {InputElement} from '../../components';
 import {DEFAULT_FORM_VALUES, VALIDATION_RULES} from './consts';
-import {useNavigate} from 'react-router-dom';
 import {Routes} from '../../lib/consts/routes';
+import {authUser} from './utils';
 
 const AuthForm: Component = () => {
     const navigate = useNavigate();
+    const [isError, setIsError] = useState<boolean>(false);
     const {
         handleSubmit,
         control,
         reset,
         formState: {isValid},
-    } = useForm<FormValues>();
+    } = useForm<FormValues>({mode: 'onBlur'});
 
     const goRegistration = () => navigate(Routes.SIGNUP);
 
-    const onSubmit = handleSubmit((values: FormValues) => {
-        // eslint-disable-next-line no-console
-        console.log(values);
-        reset(DEFAULT_FORM_VALUES);
-        // navigate('/sign-in');
+    const onSubmit = handleSubmit(async (values: FormValues) => {
+        const user = await authUser(values);
+
+        if (user) {
+            reset(DEFAULT_FORM_VALUES);
+            navigate(Routes.ROOT);
+            return;
+        }
+
+        setIsError(true);
     });
 
     return (
@@ -64,9 +71,14 @@ const AuthForm: Component = () => {
                         />
                     )}
                 />
-                <Button onClick={onSubmit} disabled={!isValid}>
-                    {TextFields.Save}
-                </Button>
+                <ButtonContainer>
+                    <Button onClick={onSubmit} disabled={!isValid}>
+                        {TextFields.Save}
+                    </Button>
+                    {isError && 
+                    <Message>{TextFields.WrongUser}</Message>
+                    }
+                </ButtonContainer>
             </Wrapper>
         </form>
     );

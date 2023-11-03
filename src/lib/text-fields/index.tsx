@@ -9,4 +9,5 @@ export const enum TextFields {
     RequiredField = 'Обязательноe поле',
     MaxLength = 'Максимальное количество символов',
     MinLength = 'Минимальное количество символов',
+    WrongUser = 'Неправильноe имя пользователя или пароль',
 };
