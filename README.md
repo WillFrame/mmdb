@@ -2,4 +2,4 @@
 
 My Music Database
 
-It is project replica of IMDB, in music version
+This project replica of IMDB, in music version
